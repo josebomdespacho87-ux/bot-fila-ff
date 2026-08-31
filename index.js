@@ -157,12 +157,11 @@ function getQueue(server, id) {
 
 function queueEmbed(queue) {
 
-  const players =
-    queue.players.length > 0
-      ? queue.players.map((id, index) =>
-          `${index + 1}. <@${id}>`
-        ).join("\n")
-      : "No players yet.";
+  const players = queue.players.length > 0
+  ? queue.players.map(function(playerId, playerIndex) {
+      return (playerIndex + 1) + ". <@" + playerId + ">";
+    }).join("\n")
+  : "No players yet.";
 
   return new EmbedBuilder()
     .setTitle(
