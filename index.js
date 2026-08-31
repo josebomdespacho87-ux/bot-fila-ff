@@ -408,9 +408,7 @@ client.on(
               "/" +
               queue.maxPlayers +
               "\n" +
-              "ID: `" +
-              queue.id +
-              "`"
+              "ID: " + queue.id
             );
           })
           .join("\n\n");
