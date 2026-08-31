@@ -1,4 +1,3 @@
-```js
 const { Client, GatewayIntentBits, REST, Routes, SlashCommandBuilder } = require("discord.js");
 
 const client = new Client({
