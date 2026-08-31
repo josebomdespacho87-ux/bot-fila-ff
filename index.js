@@ -166,8 +166,9 @@ function queueEmbed(queue) {
   return new EmbedBuilder()
     .setTitle(
       queue.type === "STREAMER"
-        ? `🎥 Streamer Queue — ${queue.name}`
-        : `🎮 Free Fire Queue — ${queue.name}`
+      queue.type === "STREAMER"
+  ? "🎥 Streamer Queue - " + queue.name
+: "🎮 Free Fire Queue - " + queue.name
     )
     .setDescription(
       `**Mode:** ${queue.mode}\n` +
